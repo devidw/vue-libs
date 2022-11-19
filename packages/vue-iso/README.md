@@ -1,9 +1,9 @@
 # Vue Isolation
 
-_Vue-iso_ provides you with a playground to develop your vue components in
+Vue-iso provides you with a playground to develop your vue components in
 isolation.
 
-It is inspired by but ships without the overload of Storybook, is vue-only and
+It is inspired by but ships without the overhead of Storybook, is vue-only and
 has a developer-first approach.
 
 There is no pretty UI that lets you change your component details from within the
@@ -60,7 +60,10 @@ defineExpose({
 </template>
 ```
 
-In the GUI you can switch between your stories with a single click or show all of them.
+In the GUI you can switch between your stories with a single click or show all
+of them.
+
+Import your components from the root of your project like `/src/components/Btn.vue`.
 
 ![](./index.png)
 

@@ -69,7 +69,6 @@ if (import.meta.env.DEV) {
       </template>
       <template v-else-if="comp">
         <div class="hidden">
-          <!-- Used to access exposed -->
           <component :is="comp" ref="compRef" />
         </div>
         <div :class="{ 'grid grid-gap-4': shouldGroup }">
@@ -88,7 +87,12 @@ if (import.meta.env.DEV) {
     </div>
 
     <div id="sidebar" class="bg-dark-9 text-light p-4 rounded space-y-3">
-      <input type="text" v-model="compPath" spellcheck="false" />
+      <input
+        type="text"
+        v-model="compPath"
+        spellcheck="false"
+        placeholder="/src/components/Btn.vue"
+      />
       <template v-if="!error && Object.keys(stories).length">
         <div
           class="grid grid-gap-3"
